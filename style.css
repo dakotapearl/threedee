@@ -1,0 +1,31 @@
+body{
+  margin:0;
+  padding:20px;
+  font:12px/17px Arial, sans-serif;
+  background:#f9f9f9;
+}
+
+#wrapper {
+  width: 900px;
+  top:0;
+  background: white;
+  margin: 0 auto;
+}
+
+#viewport {
+  margin: 0;
+}
+
+#controls, #results {
+  width: 100%;
+  height: auto;
+}
+
+#controls {
+  text-align: center;
+}
+
+#results {
+  padding: 10px;
+  margin: 1px;
+}
