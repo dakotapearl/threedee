@@ -376,7 +376,7 @@ var presetViews = {};
     var width = 45;
     var height = 30;
     
-    presetDatasets.dataset1 = [Geometry.makeShape('square2d', 5, 10, 15, 20, [255, 0, 0]), 
+    presetDatasets.dataset1 = [Geometry.makeShape('square2d', 5, 10, 15, 30, [255, 0, 0]), 
                                Geometry.makeShape('square2d', 1, 1, 44, 29, [0, 255, 0]),
                                Geometry.makeShape('square2d', -1, -1, 46, 31, [0, 0, 255])];
     presetDatasets.dataset2 = [Geometry.generateRandomCloudOfPointData(20, 1000, 3, [0, 255, 0])];
