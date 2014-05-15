@@ -13,19 +13,19 @@
     <canvas id="viewport" width="900" height="600"></canvas>
     
     <div id='objects'>
-      <button class="test input" onClick="Engine.setData(datasets.dataset1);">Data set 1</button>
-      <button class="test input" onClick="Engine.setData(datasets.dataset2);">Data set 2</button>
-      <button class="test input" onClick="Engine.setData(datasets.dataset3);">Data set 3</button>
-      <button class="test input" onClick="Engine.setData(datasets.dataset4);">Data set 4</button>
-      <button class="test input" onClick="Engine.setData(datasets.dataset5);">Data set 5</button>
+      <button class="test input" onClick="Engine.setData(presetDatasets.dataset1);">Data set 1</button>
+      <button class="test input" onClick="Engine.setData(presetDatasets.dataset2);">Data set 2</button>
+      <button class="test input" onClick="Engine.setData(presetDatasets.dataset3);">Data set 3</button>
+      <button class="test input" onClick="Engine.setData(presetDatasets.dataset4);">Data set 4</button>
+      <button class="test input" onClick="Engine.setData(presetDatasets.dataset5);">Data set 5</button>
     </div>
     
     <div id='angles'>
-      <button class="test input" onClick="Engine.setView(presetviews.view1);">angle 1</button>
-      <button class="test input" onClick="Engine.setView(presetviews.view2);">angle 2</button>
-      <button class="test input" onClick="Engine.setView(presetviews.view3);">angle 3</button>
-      <button class="test input" onClick="Engine.setView(presetviews.view4);">angle 4</button>
-      <button class="test input" onClick="Engine.setView(presetviews.view5);">angle 5</button>
+      <button class="test input" onClick="Engine.setView(presetViews.view1);">angle 1</button>
+      <button class="test input" onClick="Engine.setView(presetViews.view2);">angle 2</button>
+      <button class="test input" onClick="Engine.setView(presetViews.view3);">angle 3</button>
+      <button class="test input" onClick="Engine.setView(presetViews.view4);">angle 4</button>
+      <button class="test input" onClick="Engine.setView(presetViews.view5);">angle 5</button>
     </div>
     
     <p id='fps'></p>
