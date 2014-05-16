@@ -75,17 +75,13 @@ var presetViews = {};
         $('#fps').text(engine.getFrameRate());
         $('#timestep').text(engine.getTimeStep());
       },
-      redrawPerPixel : function () { // TODO finish it
+      redrawPerPixel : function () {
         var id, d, i;
         
-        engine.eachPixel(function(object, x, y) {
-          if (x === 0) {
-            id = ctx.createImageData(canvas.width, 1);
-            d  = id.data;
-            i = 0;
-          } else if (x === canvas.width - 1) {
-            ctx.putImageData(id, 0, y);
-          }
+        id = ctx.createImageData(canvas.width, canvas.height);
+        d  = id.data;
+        
+        engine.eachCanvasIndex(function(object, i) {
           
           if (object === null) { // No object
             d[i]     = 255;
@@ -94,13 +90,14 @@ var presetViews = {};
             d[i + 3] = 255;
           } else if (object === 'square') { // For a square
             d[i]     = 255;
-            d[i + 1] = ((y % 2 === 0) ? 254 : 0 );
+            d[i + 1] = 255;
             d[i + 2] = 0;
             d[i + 3] = 255;
           }
-          i += 4;
           
         });
+        
+        ctx.putImageData(id, 0, y);
         
         $('#fps').text(engine.getFrameRate());
       },
@@ -329,6 +326,13 @@ var presetViews = {};
             handler(findObject(x, y), x, y);
             if (!go) break;
           }
+        }
+      },
+      eachCanvasIndex : function (handler) {
+        var max = y * x;
+        for (var i = 0; i < max; i+=4) {
+          handler(findObject(x, y), i);
+          if (!go) break;
         }
       },
       start : function () {
